@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrendDrop - Hot Deals on Fashion, Gadgets & More</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      background: linear-gradient(to right, #ff4081, #e91e63);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .banner h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .banner a {
+      background: white;
+      color: #e91e63;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .banner a:hover {
+      background: #ffe6ec;
+    }
+
+    .live-counter {
+      background: #fff3f8;
+      color: #e91e63;
+      text-align: center;
+      padding: 8px 0;
+      font-weight: bold;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .category {
+      background: #fff;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: 2px solid #ff4081;
+      color: #ff4081;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .category:hover {
+      background: #ff4081;
+      color: #fff;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin: 30px 20px 10px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .heart-icon, .video-icon {
+      position: absolute;
+      top: 10px;
+      background: white;
+      border-radius: 50%;
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .heart-icon {
+      right: 10px;
+    }
+
+    .video-icon {
+      left: 10px;
+    }
+
+    .card-content {
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .price {
+      color: #000;
+      margin-top: 5px;
+    }
+
+    .offer {
+      color: green;
+      font-size: 13px;
+    }
+
+    .delivery {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .rating {
+      margin-top: 5px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .star {
+      color: green;
+    }
+
+    .buy-button {
+      display: block;
+      margin: 10px;
+      padding: 8px;
+      text-align: center;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buy-button:hover {
+      background: #e91e63;
+    }
+
+    .whatsapp-join {
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .whatsapp-join:hover {
+      background: #1ebe5d;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔥 Banner + Description -->
+<div class="banner">
+  <h1>🔥 TrendDrop Deals of the Day</h1>
+  <p>Shop viral products in Fashion, Tech, Food & more — all with amazing offers!</p>
+  <a href="#fashion">Explore Now</a>
+</div>
+
+<body><div class="live-counter" id="viewerCount">
+  🚀 243 people are browsing deals right now!
+</div>
+
+<script>
+  const viewerCount = document.getElementById('viewerCount');
+
+  function updateViewerCount() {
+    // Generate a number between 180 and 300
+    const randomNumber = Math.floor(Math.random() * (300 - 180 + 1)) + 180;
+    viewerCount.innerHTML = `🚀 ${randomNumber} people are browsing deals right now!`;
+  }
+
+  // Update every 4–7 seconds randomly
+  function scheduleNextUpdate() {
+    const delay = Math.random() * (7000 - 4000) + 4000;
+    setTimeout(() => {
+      updateViewerCount();
+      scheduleNextUpdate();
+    }, delay);
+  }
+
+  updateViewerCount();
+  scheduleNextUpdate();
+</script></body>
+
+<!-- 📢 WhatsApp Group Button -->
+<a href="https://wa.me/919999999999" class="whatsapp-join" target="_blank">Join Our WhatsApp Group for Daily Deals click </a>
+
+<!-- 📂 Categories -->
+<div class="categories">
+  <a class="category" href="#fashion">Fashion</a>
+  <a class="category" href="#gadget">Gadget</a>
+  <a class="category" href="#fitness">Fitness</a>
+  <a class="category" href="#food">Food</a>
+</div>
+
+<!-- 🧥 Fashion Section -->
+<h2 id="fashion" class="section-title">Gadget</h2>
+<div class="grid">
+  <div class="card">
+    <img src="https://i.ibb.co/yBhjjFw0/galaxy-ring-color-silver-mo.png" alt="Fashion 1">
+    <div class="heart-icon">♡</div>
+    <div class="card-content">
+      <div class="title"> Smart rings boat</div>
+      <div class="price">₹6000</div>
+      <div class="offer">₹3999 with 1 Special Offer</div>
+      <div class="delivery">Free Delivery  by flipkard$ amazone</div>
+      <div class="rating"><span class="star">★ 3.8</span> (3,466)</div>
+    </div>
+    <a class="buy-button" href="https://fktr.in/ArvS98Y" target="_blank">Buy Now</a>
+  </div>
+</div>
+
+<!-- 📱 Gadget Section -->
+<h2 id="gadget" class="section-title">Gadget</h2>
+<div class="grid">
+  <div class="card">
+    <img src="https://i.ibb.co/LwZGN6S/images-5.jpg" alt="Gadget 1">
+    <div class="heart-icon">♡</div>
+    <div class="card-content">
+      <div class="title">Esp 33</div>
+      <div class="price">₹700</div>
+      <div class="offer">₹500 with 1 Special Offer</div>
+      <div class="delivery">Delivery by Flipkart and Amazon</div>
+      <div class="rating"><span class="star">★ 4.3</span> (7,418)</div>
+    </div>
+    <a class="buy-button" href="https://fktr.in/STZNYvt" target="_blank">Buy Now</a>
+  </div>
+</div>
+
+<!-- 🏋️‍♀️ Fitness Section -->
+<h2 id="fashion" class="section-title">fashion </h2>
+<div class="grid">
+  <div class="card">
+    <img src="https://i.ibb.co/GmdBG9c/images-7.jpg" alt="Fitness 1">
+    <div class="heart-icon">♡</div>
+    <div class="card-content">
+      <div class="title">trending sharee </div>
+      <div class="price">₹464</div>
+      <div class="offer">₹416 with 2 Special Offers</div>
+      <div class="delivery">Free delivery  by flipkard</div>
+      <div class="rating"><span class="star">★ 4.1</span> (5,321)</div>
+    </div>
+    <a class="buy-button" href="https://fktr.in/pbiVzZQ" target="_blank">Buy Now</a>
+  </div>
+</div>
+
+<!-- 🍜 Food Section -->
+<h2 id="food" class="section-title">Food</h2>
+<div class="grid">
+  <div class="card">
+    <img src="    https://i.ibb.co/N605jg3L/images-4.png" alt="Food 1">
+    <div class="video-icon">▶</div>
+    <div class="card-content">
+      <div class="title">Random Meesho Finds</div>
+      <div class="price">₹199</div>
+      <div class="offer">₹169 with 1 Offer</div>
+      <div class="delivery">Free delivery  by flipkard</div>
+      <div class="rating"><span class="star">★ 4.0</span> (2,102)</div>
+    </div>
+    <a class="buy-button" href="https://example.com/affiliate-link4" target="_blank">Buy Now</a>
+  </div>
+</div>
+</html><body><!-- ⭐ Customer Reviews Section -->
+<div class="review-section">
+  <h2 class="review-heading">🗣 Customer Reviews</h2>
+  <div class="review-list" id="reviewList">
+    <!-- Reviews will auto-generate here -->
+  </div><style>.review-section {
+  background: #fff8fc;
+  padding: 30px 20px;
+  border-top: 3px dashed #ff4081;
+  border-radius: 20px 20px 0 0;
+  margin-top: 40px;
+}
+
+.review-heading {
+  text-align: center;
+  color: #ff4081;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.review-list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: scrollReviews 30s linear infinite;
+}
+
+.review-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.review-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.review-stars {
+  color: gold;
+  font-size: 14px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #444;
+  margin-top: 5px;
+}
+
+@keyframes scrollReviews {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}</style><script><script>
+const names = ["Priya S.", "Rohit K.", "Ayesha M.", "Rahul P.", "Neha J.", "Aryan D.", "Sneha R.", "Vikram T.", "Ritu V.", "Zaid U."];
+const reviews = [
+  "Great product, received quickly!",
+  "Superb quality at this price.",
+  "Loved the packaging and delivery.",
+  "Will order again! Thanks TrendDrop.",
+  "Perfect for gifting too.",
+  "The best deal online right now!",
+  "Good customer support & fast delivery.",
+  "Exactly as shown. 5 stars!",
+  "Totally worth the price.",
+  "Saved ₹300! What a steal."
+];
+
+function generateReview() {
+  const name = names[Math.floor(Math.random() * names.length)];
+  const review = reviews[Math.floor(Math.random() * reviews.length)];
+  const stars = "★".repeat(Math.floor(Math.random() * 2) + 4); // 4-5 stars
+  return `
+    <div class="review-card">
+      <div class="review-name">${rahul}</div>
+      <div class="review-stars">${stars}</div>
+      <div class="review-text">${good}</div>
+    </div>
+  `;
+}
+
+const container = document.getElementById("reviewList");
+for (let i = 0; i < 10; i++) {
+  container.innerHTML += generateReview();
+}
+</script></script>
+</div></body>
