@@ -1,130 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Earn Money App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Earning Online - 30 Days Challenge</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Arial;background:#0f172a;color:white;text-align:center;}
-.profile{margin-top:20px;}
-.logo{width:80px;height:80px;border-radius:50%;background:linear-gradient(45deg,#22c55e,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:30px;margin:auto;}
-.box{background:#1e293b;margin:15px;padding:15px;border-radius:12px;}
-button{padding:12px;border:none;background:#22c55e;color:white;font-size:16px;border-radius:8px;width:80%;margin-top:10px;}
-input{padding:10px;width:80%;border-radius:8px;border:none;}
-.progress{width:80%;height:10px;background:#334155;margin:auto;border-radius:10px;overflow:hidden;}
-.progress-bar{height:100%;width:0%;background:#22c55e;}
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 3rem;
+    color: #ffcd00;
+    text-shadow: 2px 2px 10px #ff6f00;
+    margin-bottom: 20px;
+}
+
+/* Subheading */
+p.sub {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+}
+
+/* 3D Book Image */
+.book {
+    perspective: 1000px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.book img {
+    width: 300px;
+    border-radius: 15px;
+    transform: rotateY(15deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+.book img:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+}
+
+/* Buttons */
+.button {
+    background: linear-gradient(90deg, #ffcd00, #ff6f00);
+    color: #0f172a;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(255, 110, 0, 0.4);
+    transition: 0.3s ease;
+}
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(255, 110, 0, 0.6);
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    text-align: left;
+}
+.feature-box {
+    background: #111827;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+.feature-box h3 {
+    color: #ffcd00;
+    margin-bottom: 10px;
+}
+.feature-box p {
+    color: #cbd5e1;
+}
+
+/* Ads Section */
+.ads {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    .book img { width: 250px; }
+    .ads { display: none; } /* hide skyscraper ad on mobile */
+}
 </style>
 </head>
 <body>
 
-<div class="profile">
-<div class="logo">RN</div>
-<h2>Rajaram Earn</h2>
+<div class="container">
+    <h1>Start Earning Online</h1>
+    <p class="sub">30 Days Challenge to Your First ₹1,00,000 – Step-by-Step Action Plan</p>
+    
+    <div class="book">
+        <img src="ebook-cover.png" alt="E-book Cover">
+    </div>
+
+    <!-- Buy Now Button -->
+    <br>
+    <a href="https://i.supaimg.com/0caff328-00fe-45aa-bfb9-c6e2b7866144.png" target="_blank" class="button">Buy Now - ₹299</a>
+
+    <!-- Features -->
+    <div class="features">
+        <div class="feature-box">
+            <h3>30 Days Action Plan</h3>
+            <p>Step-by-step daily guide to earn online with practical exercises.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Freelancing Tips</h3>
+            <p>Learn Fiverr, Upwork, and micro-tasking to start earning immediately.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Social Media Income</h3>
+            <p>Instagram, YouTube & WhatsApp strategies to monetize your audience.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Digital Product Ideas</h3>
+            <p>Create e-books, templates, and guides to generate passive income.</p>
+        </div>
+    </div>
+
+    <!-- Ads Section -->
+    <div class="ads">
+        <script>
+            atOptions = {
+                'key' : 'dd1e96b30526eee3aa1eba500f11f256',
+                'format' : 'iframe',
+                'height' : 600,
+                'width' : 160,
+                'params' : {}
+            };
+        </script>
+        <script src="https://www.highperformanceformat.com/dd1e96b30526eee3aa1eba500f11f256/invoke.js"></script>
+    </div>
 </div>
 
-<div class="box">
-<h3>Login / Register</h3>
-<input id="regUser" placeholder="Username"><br>
-<input id="regPass" placeholder="Password" type="password"><br>
-<button onclick="register()">Register</button>
-<button onclick="login()">Login</button>
-</div>
-
-<div class="box">
-<h3>💰 Balance</h3>
-<h1>₹<span id="money">0</span></h1>
-</div>
-
-<div class="box">
-<h3>🎬 Watch Ads</h3>
-<div class="progress"><div class="progress-bar" id="bar"></div></div>
-<button onclick="watchAd()">Watch Ad & Earn ₹2</button>
-</div>
-
-<div class="box">
-<h3>🎁 Daily Bonus</h3>
-<button onclick="bonus()">Claim ₹5</button>
-</div>
-
-<div class="box">
-<h3>💸 Withdraw</h3>
-<input type="text" id="upi" placeholder="Enter UPI ID"><br>
-<button onclick="withdraw()">Withdraw</button>
-</div>
-
-<script>
-let user="", ref="";
-let backend="http://0.0.0.0:9090"; // Replace with your Ngrok HTTPS URL
-if(location.search.includes("ref=")) ref = new URLSearchParams(location.search).get("ref");
-
-// Register
-function register(){
-  user=document.getElementById("regUser").value;
-  let pass=document.getElementById("regPass").value;
-  fetch(`${backend}/auth.php?action=register&user=${user}&pass=${pass}&ref=${ref}`)
-  .then(res=>res.json()).then(data=>alert(data.msg));
-}
-
-// Login
-function login(){
-  user=document.getElementById("regUser").value;
-  let pass=document.getElementById("regPass").value;
-  fetch(`${backend}/auth.php?action=login&user=${user}&pass=${pass}`)
-  .then(res=>res.json()).then(data=>{
-    if(data.status=="success"){ alert("Login success"); loadBalance(); }
-    else alert(data.msg);
-  });
-}
-
-// Watch Ad (secure)
-function watchAd(){
-  if(!user){ alert("Login first"); return; }
-
-  // Step 1: Get a unique token from backend
-  fetch(`${backend}/adtoken.php?user=${user}`)
-  .then(res=>res.json())
-  .then(data=>{
-    if(data.status=="success"){
-      let token = data.token;
-
-      // Step 2: Open ad URL
-      let adUrl = " https://www.profitablecpmratenetwork.com/iqfqebmd?key=12db6db0abb5a4df856c870d575520b9"; // Replace with real ad URL
-      let adWindow = window.open(adUrl,"_blank","width=400,height=600");
-
-      let checkAd = setInterval(()=>{
-        if(adWindow.closed){
-          clearInterval(checkAd);
-          // Step 3: Call earn.php with token
-          fetch(`${backend}/earn.php?user=${user}&token=${token}`)
-          .then(res=>res.text())
-          .then(()=>loadBalance());
-          alert("Ad watched! Coins added.");
-        }
-      },1000);
-    }
-  });
-}
-
-// Bonus
-function bonus(){
-  if(!user){ alert("Login first"); return; }
-  fetch(`${backend}/bonus.php?user=${user}`).then(()=>loadBalance());
-}
-
-// Withdraw
-function withdraw(){
-  if(!user){ alert("Login first"); return; }
-  let upi=document.getElementById("upi").value;
-  if(!upi){ alert("Enter UPI ID"); return; }
-  fetch(`${backend}/withdraw.php?user=${user}&upi=${upi}`).then(()=>alert("Withdraw requested"));
-}
-
-// Load balance
-function loadBalance(){
-  if(!user) return;
-  fetch(`${backend}/balance.php?user=${user}`).then(res=>res.text()).then(data=>document.getElementById("money").innerText=data);
-}
-
-window.onload=loadBalance;
-</script>
 </body>
 </html>
